@@ -4,7 +4,7 @@ import uuid
 from typing import Optional
 
 
-def lsign_calculating(captcha_id: str,
+def lsing_calculation(captcha_id: str,
                       challenge_id: str = str(uuid.uuid4()),
                       screen_width: str = "1920",
                       screen_height: str = "1080",
@@ -13,4 +13,4 @@ def lsign_calculating(captcha_id: str,
 
 
 if __name__ == "__main__":
-    print(lsign_calculating(captcha_id="CROPPED_3dfdd5c_d1872b526b794d83ba3b365eb15a200b"))
+    print(lsing_calculation(captcha_id="CROPPED_3dfdd5c_d1872b526b794d83ba3b365eb15a200b"))
