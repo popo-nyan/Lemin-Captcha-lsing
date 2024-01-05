@@ -1,6 +1,5 @@
 # LeminCaptcha lsing
-LeminCaptchaで課題画像を取得する時に必要なハッシュ値
-
+Hash value required when retrieving issue images with LeminCaptcha
 # Using
 ```bash
 python -m venv .venv
