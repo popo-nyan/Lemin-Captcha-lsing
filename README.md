@@ -1,6 +1,6 @@
 # LeminCaptcha lsing
 Hash value required when retrieving issue images with LeminCaptcha
-# Using
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
