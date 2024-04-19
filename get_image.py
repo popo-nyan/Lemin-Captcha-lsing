@@ -7,16 +7,17 @@ from typing import Optional
 class LeminCaptcha:
     
     def __init__(self,
-                 captcha_id: str):
+                 captcha_id: str
+                 ):
         self.captcha_id = captcha_id
         self.__challenge_id = str(uuid.uuid4())
-        self.__session = httpx.Client(http2=True)
+        self.__session = httpx.Client()
         self.__screen_width = "1920"
         self.__screen_height = "1080"
         self.__utc_offset = "-540"
     
     def __lsing_calculation(self) -> str:
-        return hashlib.md5(str("https://api.leminnow.com/captcha/v1/cropped/%s/image/%s?+screen_width=%s&screen_height=%s&utc_offset=%s&v=3&enc=SHA256" % (self.captcha_id, self.__challenge_id, self.__screen_width, self.__screen_height, self.__utc_offset)).encode()).hexdigest()
+        return hashlib.md5(str(f"https://api.leminnow.com/captcha/v1/cropped/{self.captcha_id}/image/{self.__challenge_id}?screen_width={self.__screen_width}&screen_height={self.__screen_height}&utc_offset={self.__utc_offset}&v=3&enc=SHA256" + "e8269cb1-56c9-4f39-99ce-94f986c9e933").encode()).hexdigest()
     
     def get_image_url(self) -> Optional[str]:
         response = self.__session.request(method="GET",
