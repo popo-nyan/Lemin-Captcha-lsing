@@ -9,7 +9,7 @@ def lsing_calculation(captcha_id: str,
                       screen_width: str = "1920",
                       screen_height: str = "1080",
                       utc_offset: str = "-540") -> str:
-    return hashlib.md5(str("https://api.leminnow.com/captcha/v1/cropped/%s/image/%s?+screen_width=%s&screen_height=%s&utc_offset=%s&v=3&enc=SHA256" % (captcha_id, challenge_id, screen_width, screen_height, utc_offset)).encode()).hexdigest()
+        return hashlib.md5(str(f"https://api.leminnow.com/captcha/v1/cropped/{self.captcha_id}/image/{challenge_id}?screen_width={screen_width}&screen_height={screen_height}&utc_offset={utc_offset}&v=3&enc=SHA256" + "e8269cb1-56c9-4f39-99ce-94f986c9e933").encode()).hexdigest()
 
 
 if __name__ == "__main__":
