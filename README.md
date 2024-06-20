@@ -9,4 +9,3 @@ python main.py
 ```
 # Contact
 - Matrix: @qoo.nyan:usesarchbtw.lol
-- Telegram: @kuma_neko
