@@ -8,4 +8,5 @@ python -m pip install -r requirements.txt
 python main.py
 ```
 # Contact
-- Matrix: @qoo.nyan:usesarchbtw.lol
+
+- Matrix: [@kounomiya-cat:matrix.org](https://matrix.to/#/@kounomiya-cat:matrix.org)
